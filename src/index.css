@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  body {
+    background-color: #1d1c2a;
+  }
+  .page {
+    color: #7a8197;
+    padding: 1.5rem 0;
+    font-weight: 600;
+  }
+
+  .active {
+    background-color: rgb(45, 47, 61);
+    border-left: 3px;
+    border-style: solid;
+    border-color: #01a2ff;
+    color: #01a2ff;
+  }
+}
