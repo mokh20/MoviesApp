@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
-import MoviesCard from "./MoviesCard";
+import MoviesCard from "./MovieCard";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 
@@ -25,12 +25,12 @@ const Slider = ({ movies, title }) => {
 
   return (
     <section className="w-11/12 my-4">
-      <NavLink to={"/" + title} className="text-lg text-white hover:">
+      <NavLink to={"/" + title} className="text-lg text-white">
         <h2 className="mb-2 sm:ml-40 lg:ml-52">{title}</h2>
       </NavLink>
       <section className="bg-slate-800 p-4 pl-6 rounded-xl lg:ml-48 sm:ml-36">
         <Swiper
-          spaceBetween={70}
+          spaceBetween={50}
           slidesPerView={2}
           navigation={{
             nextEl: ".swiper-button-next",
@@ -41,18 +41,27 @@ const Slider = ({ movies, title }) => {
           breakpoints={{
             400: {
               slidesPerView: 2,
+              spaceBetween: 0,
+            },
+            550: {
+              slidesPerView: 3,
+              spaceBetween: 100,
             },
             750: {
               slidesPerView: 3,
+              spaceBetween: 0,
             },
             1080: {
               slidesPerView: 5,
+              spaceBetween: 0,
             },
             1280: {
               slidesPerView: 6,
+              spaceBetween: 0,
             },
             1400: {
               slidesPerView: 7,
+              spaceBetween: 0,
             },
           }}
         >

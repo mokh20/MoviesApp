@@ -19,4 +19,14 @@
     border-color: #01a2ff;
     color: #01a2ff;
   }
+  .btn-back-home {
+    position: fixed;
+    left: 4rem;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    color: white;
+    background-color: #688297;
+    transition: all ease-in-out 0.5s;
+  }
 }

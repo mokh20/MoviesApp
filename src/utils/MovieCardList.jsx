@@ -1,4 +1,4 @@
-import MoviesCard from "./MoviesCard";
+import MovieCard from "./MovieCard";
 
 const moviesList = ({ movies, title }) => {
   return (
@@ -6,7 +6,7 @@ const moviesList = ({ movies, title }) => {
       <h2 className="my-8 text-xl text-white font-bold">{title}</h2>
       <section className="flex flex-col w-full gap-4 sm:flex sm:flex-wrap sm:flex-row">
         {movies.map((movie) => (
-          <MoviesCard key={movie.id} movie={movie} />
+          <MovieCard key={movie.id} movie={movie} />
         ))}
       </section>
     </section>

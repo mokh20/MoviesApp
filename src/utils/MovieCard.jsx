@@ -1,6 +1,6 @@
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
-const MoviesCard = ({ movie }) => {
+const MovieCard = ({ movie }) => {
   return (
     <div className="grid relative w-[145px] group text-[.7rem] text-white overflow-hidden cursor-pointer">
       <div className="w-full absolute bottom-2 left-0 pl-2 z-10 break-word p-1 bg-[#00000046] ">
@@ -19,7 +19,7 @@ const MoviesCard = ({ movie }) => {
       </span>
       <span className="overflow-hidden rounded-lg ">
         {movie.poster_path === null ? (
-          <img className="img object-cover" src={NoImg} />
+          <img className="img object-cover" src={"../assets/NoImg.jpg"} />
         ) : (
           <LazyLoadImage
             effect="blur"
@@ -32,4 +32,4 @@ const MoviesCard = ({ movie }) => {
   );
 };
 
-export default MoviesCard;
+export default MovieCard;

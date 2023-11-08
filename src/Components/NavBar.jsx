@@ -12,8 +12,8 @@ const NavBar = () => {
   ];
   return (
     <section
-      className={`flex flex-col h-full w-full text-white fixed left-0 top-0 items-center z-50 ${
-        isOpen ? "bg-[#222433f0]" : "w-0"
+      className={`flex flex-col h-full  text-white fixed left-0 top-0 items-center z-50 ${
+        isOpen ? "bg-[#222433f0] w-full" : "w-0"
       } sm:w-[200px] sm:bg-[#222433] `}
     >
       <button
