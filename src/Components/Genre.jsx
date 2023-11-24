@@ -8,11 +8,11 @@ const Genre = () => {
   }, []);
 
   return (
-    <section className="text-white flex flex-wrap justify-center items-start w-full mt-12 ml-0 lg:ml-32 md:ml-48 sm:ml-48 sm:mt-4">
+    <section className="text-white flex flex-wrap justify-center items-start w-full mt-12 ml-0  lg:ml-32 md:ml-48 sm:ml-48 sm:mt-4">
       {genres.map((gen) => (
         <button
           key={gen.id}
-          className={`px-4 py-2 rounded-3xl text-sm m-2 transition-all duration-500 sm:text-base ${
+          className={`px-4 py-2 rounded-3xl text-sm m-2 transition-all duration-700 sm:text-base hover:bg-[#01a2ff]  ${
             activeGenre == gen.id ? "bg-[#01a2ff]" : "bg-slate-600"
           }`}
           onClick={() => setActiveGenre(gen.id)}

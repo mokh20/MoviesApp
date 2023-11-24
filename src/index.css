@@ -29,4 +29,8 @@
     background-color: #688297;
     transition: all ease-in-out 0.5s;
   }
+  .active-btn {
+    color: #01a2ff;
+    transition: all ease-in-out 0.5s;
+  }
 }

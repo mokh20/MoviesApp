@@ -3,6 +3,7 @@ import Genre from "../Components/Genre";
 import Movies from "./MoviesFiltered";
 import Slider from "../utils/Slider";
 import { useMovies } from "../Context/MovieProvider";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   const {
@@ -20,6 +21,9 @@ const Home = () => {
   return (
     <section className="flex justify-center flex-wrap gap-5 w-full overflow-x-hidden page xl:ml-0 lg:ml-0 md:ml-16 sm:ml-8 ">
       <div className="lg:mr-28 md:mr-56 sm:mr-60">
+        <Helmet>
+          <title>Home</title>
+        </Helmet>
         <Genre />
       </div>
       <Movies>

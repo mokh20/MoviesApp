@@ -22,13 +22,14 @@ const NavBar = () => {
       >
         <AiOutlineMenu></AiOutlineMenu>
       </button>
-      <h2
-        className={`text-2xl font-bold m-8 ${
+      <NavLink
+        to="/"
+        className={`text-2xl font-bold m-8 bg-inherit border-none text-white hover:active-btn ${
           isOpen ? "block" : "hidden"
         } sm:block`}
       >
         Movies App
-      </h2>
+      </NavLink>
       <section
         className={`flex-col h-1/2 items-stretch w-full text-center ${
           isOpen ? "flex" : "hidden"
@@ -38,7 +39,7 @@ const NavBar = () => {
           <NavLink
             to={data.path}
             key={data.id}
-            className="page"
+            className="page hover:active-btn"
             activeclassname="active"
           >
             {data.title}
