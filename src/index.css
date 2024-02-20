@@ -22,15 +22,29 @@
   .btn-back-home {
     position: fixed;
     left: 4rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     padding: 0.5rem;
     border-radius: 50%;
     color: white;
-    background-color: #688297;
+    background-color: #4a5567;
     transition: all ease-in-out 0.5s;
   }
   .active-btn {
     color: #01a2ff;
     transition: all ease-in-out 0.5s;
+  }
+}
+
+@layer base {
+  @font-face {
+    font-family: "Mona Sans";
+    src: url("Mona-Sans.woff2") format("woff2 supports variations"),
+      url("Mona-Sans.woff2") format("woff2-variations");
+    font-weight: 200 900;
+    font-stretch: 75% 125%;
+  }
+
+  html {
+    font-family: "Mona Sans";
   }
 }

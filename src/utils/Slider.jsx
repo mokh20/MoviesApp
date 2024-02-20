@@ -1,3 +1,6 @@
+import MoviesCard from "./MovieCard";
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
 import { AiOutlineRightCircle, AiOutlineLeftCircle } from "react-icons/ai";
 import { BsArrowRight } from "react-icons/bs";
 // Import Swiper React components
@@ -7,9 +10,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
-import MoviesCard from "./MovieCard";
-import { NavLink } from "react-router-dom";
-import { useState } from "react";
 
 const Slider = ({ movies, title }) => {
   const moviesList = movies.slice(0, 12);

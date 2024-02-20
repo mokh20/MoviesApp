@@ -16,9 +16,11 @@
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.11.0",
+    "react-id-swiper": "^4.0.0",
     "react-lazy-load-image-component": "^1.6.0",
-    "react-router-dom": "^6.18.0",
-    "swiper": "^11.0.3"
+    "react-router-dom": "^6.22.0",
+    "react-youtube": "^10.1.0",
+    "swiper": "^11.0.6"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

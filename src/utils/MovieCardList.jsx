@@ -1,6 +1,6 @@
 import MovieCard from "./MovieCard";
 
-const moviesList = ({ movies, title }) => {
+const MoviesList = ({ movies, title }) => {
   return (
     <section className="page mx-0 h-full flex justify-center sm:ml-64">
       <h2 className="my-8 text-xl text-white font-bold">{title}</h2>
@@ -13,4 +13,4 @@ const moviesList = ({ movies, title }) => {
   );
 };
 
-export default moviesList;
+export default MoviesList;

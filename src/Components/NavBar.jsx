@@ -17,7 +17,7 @@ const NavBar = () => {
       } sm:w-[200px] sm:bg-[#222433] `}
     >
       <button
-        className="absolute text-2xl left-4 top-4 bg-slate-600 p-2 rounded-full sm:hidden"
+        className="absolute text-lg left-4 top-4 bg-slate-600 p-2 rounded-full sm:hidden"
         onClick={() => setIsOpen(!isOpen)}
       >
         <AiOutlineMenu></AiOutlineMenu>
@@ -31,12 +31,13 @@ const NavBar = () => {
         Movies App
       </NavLink>
       <section
-        className={`flex-col h-1/2 items-stretch w-full text-center ${
+        className={`flex-col h-1/2 items-stretch w-full text-center  ${
           isOpen ? "flex" : "hidden"
         } sm:flex`}
       >
         {NavData.map((data) => (
           <NavLink
+            end
             to={data.path}
             key={data.id}
             className="page hover:active-btn"

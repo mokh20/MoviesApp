@@ -5,6 +5,7 @@ import Home from "./Pages/Home";
 import Trending from "./Pages/Trending";
 import Upcoming from "./Pages/Upcoming";
 import Movies from "./Pages/MoviesFiltered";
+import MovieDetailsData from "./Components/MovieDetailsData";
 
 const App = () => {
   return (
@@ -14,7 +15,8 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/Popular" element={<Trending />} />
           <Route path="/Upcoming" element={<Upcoming />} />
-          <Route path="*" element={<Movies />}></Route>
+          <Route path="/All/:id" element={<MovieDetailsData />} />
+          <Route path="*" element={<Movies />} />
         </Routes>
         <NavBar />
       </section>
