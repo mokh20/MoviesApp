@@ -76,7 +76,11 @@ const CastMovie = ({ cast }) => {
   return (
     <div className="text-xs rounded-lg">
       {cast.profile_path === null ? (
-        <img src="../src/assets/NoImg.jpg" className="rounded-lg" />
+        <LazyLoadImage
+          effect="blur"
+          src="/assets/NoImg.jpg"
+          className="rounded-lg"
+        />
       ) : (
         <LazyLoadImage
           className="rounded-t-lg"
