@@ -14,9 +14,6 @@
 
   .active {
     background-color: rgb(45, 47, 61);
-    border-left: 3px;
-    border-style: solid;
-    border-color: #01a2ff;
     color: #01a2ff;
   }
   .btn-back-home {

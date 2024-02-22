@@ -27,13 +27,11 @@ const Movies = ({ children }) => {
         <Route
           path="/All"
           element={
-            <section className="flex flex-wrap mt-4 my-4 items-start w-full justify-center relative sm:ml-0">
+            <section className="flex flex-wrap mt-4 my-4 items-start w-full justify-center relative">
               <Helmet>
                 <title>All Movies</title>
               </Helmet>
-              <div className="2xl:mr-44">
-                <Genre />
-              </div>
+              <Genre />
               <AllMovies movies={movies} />
             </section>
           }

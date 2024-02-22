@@ -8,7 +8,7 @@ const Genre = () => {
   }, []);
 
   return (
-    <section className="text-white flex flex-wrap justify-center items-start w-full mt-12 ml-0  lg:ml-32 md:ml-48 sm:ml-48 sm:mt-4">
+    <section className="text-white flex flex-wrap justify-center items-start w-full mt-12 ml-0 sm:mt-4">
       {genres.map((gen) => (
         <button
           key={gen.id}

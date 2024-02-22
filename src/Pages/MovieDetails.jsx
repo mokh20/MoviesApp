@@ -27,7 +27,7 @@ const MovieDetails = ({ movieData, casts }) => {
   // Get Genres of Movie
   const genres = movieData?.genres?.map((gen) => gen.name);
   return (
-    <div className="ml-0 sm:ml-[25rem]">
+    <div>
       <NavLink to="/">
         <button className="btn-back-home text-xl top-16 left-4 z-10 hover:bg-[#01a2ff] sm:left-[215px] sm:top-4">
           <BsArrowLeft />

@@ -26,9 +26,9 @@ const Slider = ({ movies, title }) => {
   return (
     <section className="w-11/12 my-4">
       <NavLink to={"/" + title} className="text-lg text-white">
-        <h2 className="mb-2 hover:active-btn sm:ml-40 lg:ml-52">{title}</h2>
+        <h2 className="mb-2 hover:active-btn">{title}</h2>
       </NavLink>
-      <section className="bg-slate-800 p-4 pl-6 rounded-xl lg:ml-48 sm:ml-36">
+      <section className="bg-slate-800 p-4 pl-6 rounded-xl">
         <Swiper
           spaceBetween={50}
           slidesPerView={2}

@@ -39,9 +39,9 @@ const MovieDetailsData = () => {
     }
   };
   return (
-    <div>
+    <>
       <MovieDetails movieData={movieData} casts={casts} />
-    </div>
+    </>
   );
 };
 
