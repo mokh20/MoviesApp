@@ -37,14 +37,14 @@ const NavBar = () => {
       <section
         className={`flex-col h-1/2 items-stretch w-full text-center mt-8 ${
           isOpen ? "flex" : "hidden"
-        } sm:flex sm:flex-row sm:my-2 sm:items-center sm:gap-5 sm:ml-8 sm:text-xs md:gap-10 md:text-base`}
+        } sm:flex sm:flex-row sm:my-2 sm:items-center sm:ml-8 sm:text-xs  md:text-base`}
       >
         {NavData.map((data) => (
           <NavLink
             end
             to={data.path}
             key={data.id}
-            className="page p-5 hover:active-btn"
+            className="page sm:p-6 md:p-5 hover:active-btn"
             activeclassname="active sm:active-btn"
           >
             {data.title}

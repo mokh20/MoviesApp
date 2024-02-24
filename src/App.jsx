@@ -10,7 +10,7 @@ import MovieDetailsData from "./Components/MovieDetailsData";
 const App = () => {
   return (
     <MovieProvider>
-      <section className="w-full h-full flex mt-16 bg-[#1d1c2a] page p-0 justify-center">
+      <section className="w-full h-full flex sm:mt-16 bg-[#1d1c2a] page p-0 justify-center">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Popular" element={<Trending />} />

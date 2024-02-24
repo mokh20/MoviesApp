@@ -27,9 +27,9 @@ const MovieDetails = ({ movieData, casts }) => {
   // Get Genres of Movie
   const genres = movieData?.genres?.map((gen) => gen.name);
   return (
-    <div>
+    <div className="w-full">
       <NavLink to="/">
-        <button className="btn-back-home text-xl top-16 left-4 z-10 hover:bg-[#01a2ff] sm:left-[215px] sm:top-4">
+        <button className="btn-back-home text-xl top-16 left-4 z-10 hover:bg-[#01a2ff] sm:left-7 sm:top-20">
           <BsArrowLeft />
         </button>
       </NavLink>
@@ -65,7 +65,7 @@ const MovieDetails = ({ movieData, casts }) => {
       <p className="m-2 border-b-[1px] border-borderBottom pb-2 px-2">
         {movieData.overview}
       </p>
-      {renderSlider(casts)}
+      <RenderSlider casts={casts} />
     </div>
   );
 };
@@ -97,9 +97,10 @@ const CastMovie = ({ cast }) => {
 };
 
 // Show slider of cast
-const renderSlider = (casts) => {
+const RenderSlider = ({ casts }) => {
   return (
-    <div>
+    <section className="w-full my-4">
+      <h2 className="px-4">Top Cast</h2>
       {/* Slider in mobile device */}
       <section className="w-screen my-4 block sm:hidden">
         <Swiper
@@ -136,7 +137,7 @@ const renderSlider = (casts) => {
         </Swiper>
       </section>
       {/* Slider in other devices */}
-      <section className="w-screen my-4 hidden sm:block sm:px-4">
+      <section className="w-full my-4 hidden sm:block sm:px-4">
         <Swiper
           slidesPerView={4}
           spaceBetween={20}
@@ -160,6 +161,6 @@ const renderSlider = (casts) => {
           ))}
         </Swiper>
       </section>
-    </div>
+    </section>
   );
 };
