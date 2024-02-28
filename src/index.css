@@ -8,12 +8,10 @@
   }
   .page {
     color: #7a8197;
-    padding: 1.5rem 0;
     font-weight: 600;
   }
 
   .active {
-    background-color: rgb(45, 47, 61);
     color: #01a2ff;
   }
   .btn-back-home {
@@ -28,7 +26,8 @@
   }
   .active-btn {
     color: #01a2ff;
-    transition: all ease-in-out 0.5s;
+    background-color: #ffffff2c;
+    border-radius: 16px;
   }
 }
 

@@ -27,9 +27,9 @@ const MovieDetails = ({ movieData, casts }) => {
   // Get Genres of Movie
   const genres = movieData?.genres?.map((gen) => gen.name);
   return (
-    <div className="w-full">
+    <div className="w-full -mt-16">
       <NavLink to="/">
-        <button className="btn-back-home text-xl top-16 left-4 z-10 hover:bg-[#01a2ff] sm:left-7 sm:top-20">
+        <button className="btn-back-home text-xl top-16 left-4 z-10 hover:bg-[#01a2ff] sm:left-9 sm:top-20">
           <BsArrowLeft />
         </button>
       </NavLink>
@@ -59,7 +59,7 @@ const MovieDetails = ({ movieData, casts }) => {
         </div>
         <AiFillPlayCircle
           onClick={() => setIsOpen((prev) => !prev)}
-          className="fixed top-4 right-4 text-4xl text-slate-600 hover:text-[#01a2ff]"
+          className="fixed top-4 right-4 text-4xl text-slate-600 hover:text-[#01a2ff] z-20"
         />
       </div>
       <p className="m-2 border-b-[1px] border-borderBottom pb-2 px-2">
@@ -102,14 +102,14 @@ const RenderSlider = ({ casts }) => {
     <section className="w-full my-4">
       <h2 className="px-4">Top Cast</h2>
       {/* Slider in mobile device */}
-      <section className="w-screen my-4 block sm:hidden">
+      <section className="w-full my-4 block sm:hidden">
         <Swiper
           effect={"coverflow"}
           grabCursor={true}
           centeredSlides={true}
           slidesPerView={3}
           spaceBetween={20}
-          loop={true}
+          // loop={true}
           coverflowEffect={{
             rotate: 50,
             stretch: 0,
@@ -141,12 +141,12 @@ const RenderSlider = ({ casts }) => {
         <Swiper
           slidesPerView={4}
           spaceBetween={20}
-          freeMode="true"
-          loop="true"
+          loop={true}
           autoplay={{
             delay: 800,
             disableOnInteraction: false,
           }}
+          stopOnLastSlide={false}
           breakpoints={{
             600: { slidesPerView: 6 },
             800: { slidesPerView: 8 },

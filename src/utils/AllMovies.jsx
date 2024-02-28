@@ -6,7 +6,7 @@ const AllMovies = ({ movies }) => {
   return (
     <section className="relative my-4">
       <NavLink to="/">
-        <button className="btn-back-home top-16 left-4 z-10 hover:bg-[#01a2ff] sm:left-[2px] sm:top-20">
+        <button className="btn-back-home top-16 left-4 z-10 hover:bg-[#01a2ff] sm:left-9 sm:top-20">
           <BsArrowLeft />
         </button>
       </NavLink>
