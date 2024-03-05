@@ -10,6 +10,32 @@ export default {
       borderColor: {
         borderBottom: "#ffffff23",
       },
+      keyframes: {
+        SliderBtnRight: {
+          "0%": { transform: "translateX(0px)" },
+          "10%": { transform: "translateX(2px)" },
+          "20%": { transform: "translateX(4px)" },
+          "30%": { transform: "translateX(6px)" },
+          "40%": { transform: "translateX(8px)" },
+          "60%": { transform: "translateX(10px)" },
+          "80%": { transform: "translateX(6px)" },
+          "100%": { transform: "translateX(0px)" },
+        },
+        SliderBtnLeft: {
+          "0%": { transform: "translateX(0px)" },
+          "10%": { transform: "translateX(-2px)" },
+          "20%": { transform: "translateX(-4px)" },
+          "30%": { transform: "translateX(-6px)" },
+          "40%": { transform: "translateX(-8px)" },
+          "60%": { transform: "translateX(-10px)" },
+          "80%": { transform: "translateX(-6px)" },
+          "100%": { transform: "translateX(0px)" },
+        },
+      },
+      animation: {
+        rightBtn: "SliderBtnRight 1s linear infinite",
+        leftBtn: "SliderBtnLeft 1s linear infinite",
+      },
     },
   },
   plugins: [],

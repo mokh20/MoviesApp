@@ -13,6 +13,7 @@
 
   .active {
     color: #01a2ff;
+    transition: all 0.5s ease-in-out;
   }
   .btn-back-home {
     position: fixed;
@@ -28,6 +29,8 @@
     color: #01a2ff;
     background-color: #ffffff2c;
     border-radius: 16px;
+    transition: color 0.5s ease-in-out;
+    transition: background-color 0.5s ease-in-out;
   }
 }
 

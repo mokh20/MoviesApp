@@ -25,10 +25,10 @@ const Slider = ({ movies, title }) => {
 
   return (
     <section className="w-11/12 my-4">
-      <NavLink to={"/" + title} className="text-lg text-white">
-        <h2 className="mb-2 hover:active-btn">{title}</h2>
+      <NavLink to={"/" + title} className="text-lg text-white ">
+        <h2 className="mb-2 hover:active">{title}</h2>
       </NavLink>
-      <section className="bg-slate-800 p-4 pl-6 rounded-xl">
+      <section className="bg-slate-800 p-4 pl-6 rounded-xl lg:pr-8">
         <Swiper
           spaceBetween={50}
           slidesPerView={2}
@@ -39,38 +39,30 @@ const Slider = ({ movies, title }) => {
           modules={[Navigation]}
           onSlideChange={handleSlideChange}
           breakpoints={{
-            400: {
-              slidesPerView: 2,
-              spaceBetween: 0,
+            640: {
+              slidesPerView: 4,
             },
-            550: {
-              slidesPerView: 3,
-              spaceBetween: 100,
+
+            768: {
+              slidesPerView: 4.2,
             },
-            750: {
-              slidesPerView: 3,
-              spaceBetween: 0,
-            },
-            1080: {
-              slidesPerView: 5,
-              spaceBetween: 0,
+            1024: {
+              slidesPerView: 5.4,
             },
             1280: {
-              slidesPerView: 6,
-              spaceBetween: 0,
-            },
-            1400: {
               slidesPerView: 7,
-              spaceBetween: 0,
+            },
+            1536: {
+              slidesPerView: 8,
             },
           }}
         >
-          <AiOutlineLeftCircle className="swiper-button-prev text-[#01a2ff] w-12"></AiOutlineLeftCircle>
+          <AiOutlineLeftCircle className="swiper-button-prev text-[#01a2ff] w-12 hover:animate-leftBtn" />
           <AiOutlineRightCircle
-            className={`swiper-button-next text-[#01a2ff] w-12 transition-all ease-in-out duration-500 ${
+            className={`swiper-button-next text-[#01a2ff] w-12 transition-all ease-in-out duration-500 hover:animate-rightBtn ${
               isEnd ? "opacity-0 cursor-default" : "opacity-100 cursor-pointer"
             }`}
-          ></AiOutlineRightCircle>
+          />
           {moviesList.map((movie) => (
             <SwiperSlide key={movie.id}>
               <MoviesCard movie={movie} />
@@ -80,12 +72,12 @@ const Slider = ({ movies, title }) => {
           <SwiperSlide>
             <NavLink
               to={"/" + title}
-              className={`w-28 mt-16 py-6 flex-col justify-center items-center text-ms font-medium ${
+              className={`w-28 mt-16 py-6 flex-col justify-center items-center text-xs sm:text-base font-medium  ${
                 moviesList.length === 0 ? "hidden" : "flex"
               } `}
             >
-              <section className="hover:active-btn grid justify-items-center">
-                <BsArrowRight className="text-2xl"></BsArrowRight>
+              <section className="hover:active grid justify-items-center">
+                <BsArrowRight className="text-lg sm:text-2xl"></BsArrowRight>
                 <p>See All Movies</p>
               </section>
             </NavLink>

@@ -1,16 +1,38 @@
-import { useState } from "react";
-import { AiOutlineMenu } from "react-icons/ai";
-import { NavLink } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { NavLink, useLocation } from "react-router-dom";
+import { GoHome, GoHomeFill } from "react-icons/go";
+import {
+  RiFilmLine,
+  RiFilmFill,
+  RiUserLine,
+  RiUserFill,
+  RiSearchLine,
+  RiSearchFill,
+} from "react-icons/ri";
+import {
+  PiTelevisionSimpleLight,
+  PiTelevisionSimpleFill,
+} from "react-icons/pi";
 
 const NavBar = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const [isScroll, setIsScroll] = useState(false);
+  useEffect(() => {
+    const windowScroll = () => {
+      setIsScroll(window.scrollY >= 50);
+    };
 
-  const windowScroll = () => {
-    if (window.scrollY >= 64) setIsScroll(true);
-    else setIsScroll(false);
-  };
-  window.addEventListener("scroll", windowScroll);
+    window.addEventListener("scroll", windowScroll);
+
+    return () => {
+      window.removeEventListener("scroll", windowScroll);
+    };
+  }, []);
+  const NavTitle = [
+    { title: "Home", id: 1, path: "/" },
+    { title: "Movies", id: 2, path: "All" },
+    { title: "TvShows", id: 3, path: "/Popular" },
+    { title: "Upcoming Movies", id: 4, path: "/Upcoming" },
+  ];
 
   const NavData = [
     { title: "Home", id: 1, path: "/" },
@@ -18,27 +40,19 @@ const NavBar = () => {
     { title: "Most Popular Movies", id: 3, path: "/Popular" },
     { title: "Upcoming Movies", id: 4, path: "/Upcoming" },
   ];
+
   return (
     <section
-      className={`flex flex-col h-full text-white fixed left-0 top-0 items-center z-10 ${
+      className={`flex justify-center h-16 w-full bg-[#20293A] text-white fixed bottom-0 items-center z-10 ${
         isScroll
-          ? "bg-clip-padding backdrop-filter backdrop-blur-md bg-[#222433c3]"
+          ? "sm:bg-clip-padding sm:backdrop-filter sm:backdrop-blur-md sm:bg-[#222433c3]"
           : ""
-      } ${
-        isOpen ? "bg-[#222433f0] w-full" : "w-0"
-      } sm:h-16 sm:w-full sm:flex-row sm:shadow-navBar transition-all duration-700 ease-in-out`}
+      }  sm:top-0 sm:shadow-navBar sm:justify-start transition-all duration-500 ease-in-out`}
     >
-      <button
-        className="absolute text-lg left-4 top-4 bg-slate-600 p-2 rounded-full sm:hidden"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        <AiOutlineMenu></AiOutlineMenu>
-      </button>
       <NavLink
         to="/"
-        className={`text-2xl bg-transparent font-bold m-8 border-none text-white hover:active-btn ${
-          isOpen ? "block" : "hidden"
-        } sm:block sm:ml-8 md:ml-10`}
+        className={`hidden text-2xl bg-transparent font-bold m-8 border-none text-white hover:active-btn 
+         sm:block sm:ml-8 md:ml-10`}
       >
         <img
           src="/assets/MovieIcon.png"
@@ -47,24 +61,104 @@ const NavBar = () => {
         />
       </NavLink>
       <section
-        className={`flex-col h-1/2 items-stretch w-full text-center mt-8 ${
-          isOpen ? "flex" : "hidden"
-        } sm:flex sm:flex-row sm:my-2 sm:items-center sm:ml-8 sm:text-xs md:text-base`}
+        className={`flex w-full justify-between text-center items-center sm:my-2 sm:ml-8 sm:text-xs md:text-base`}
       >
-        {NavData.map((data) => (
+        {/* {NavData.map((data) => (
           <NavLink
             end
             to={data.path}
             key={data.id}
-            className="text-[#7a8197] sm:text-white py-6 sm:py-1 sm:px-6 md:px-5  hover:active-btn"
-            activeclassname={`${isOpen ? "active" : ""}`}
+            className="text-[#7a8197] sm:text-white px-3 py-6 sm:py-1 sm:px-6 md:px-5 hover:active-btn"
           >
             {data.title}
           </NavLink>
-        ))}
+        ))} */}
+        <RenderNavBar />
       </section>
     </section>
   );
 };
 
 export default NavBar;
+
+const RenderNavBar = () => {
+  const location = useLocation();
+  const NavTitle = [
+    { title: "Home", id: 1, path: "/" },
+    { title: "Movies", id: 2, path: "All" },
+    { title: "TvShows", id: 3, path: "/Popular" },
+    { title: "Upcoming Movies", id: 4, path: "/Upcoming" },
+  ];
+
+  const NavData = [
+    { title: "Home", id: 1, path: "/" },
+    { title: "All Movies", id: 2, path: "All" },
+    { title: "Most Popular Movies", id: 3, path: "/Popular" },
+    { title: "Upcoming Movies", id: 4, path: "/Upcoming" },
+  ];
+
+  const NavDataMobile = [
+    { title: <GoHome />, filledTitle: <GoHomeFill />, id: 1, path: "/" },
+    {
+      title: <RiFilmLine />,
+      filledTitle: <RiFilmFill />,
+      id: 2,
+      path: "/Movie",
+    },
+    {
+      title: <RiSearchLine />,
+      filledTitle: <RiSearchFill />,
+      id: 3,
+      path: "/Search",
+    },
+    {
+      title: <PiTelevisionSimpleLight />,
+      filledTitle: <PiTelevisionSimpleFill />,
+      id: 4,
+      path: "/TvShow",
+    },
+    {
+      title: <RiUserLine />,
+      filledTitle: <RiUserFill />,
+      id: 5,
+      path: "/User",
+    },
+  ];
+
+  const isPathActive = (path) => {
+    return location.pathname === path;
+  };
+  return (
+    <section className="w-full">
+      <section className="flex w-full justify-evenly sm:hidden">
+        {NavDataMobile.map((data) => (
+          <NavLink
+            end
+            to={data.path}
+            key={data.id}
+            className="text-[#7a8197] text-2xl flex justify-center w-full px-3 py-6"
+          >
+            {isPathActive(data.path) ? data.filledTitle : data.title}
+          </NavLink>
+        ))}
+      </section>
+      <section className="hidden sm:flex sm:w-full sm:items-center justify-between pr-20">
+        <section>
+          {NavTitle.map((data) => (
+            <NavLink
+              end
+              to={data.path}
+              key={data.id}
+              className="text-slate-300 py-2 px-6 md:px-5 hover:active-btn"
+            >
+              {data.title}
+            </NavLink>
+          ))}
+        </section>
+        <span className="border-2 rounded-full text-ms w-9 h-9 flex justify-center items-center cursor-pointer hover:bg-[#01a2ff] hover:text-black hover:border-none transition-colors duration-500">
+          <RiSearchLine />
+        </span>
+      </section>
+    </section>
+  );
+};
