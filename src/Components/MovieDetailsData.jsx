@@ -33,7 +33,7 @@ const MovieDetailsData = () => {
       } = await axios.get(
         `https://api.themoviedb.org/3/movie/${id}/credits?api_key=${APIKEY}`
       );
-      setCasts(cast.slice(0, 10));
+      setCasts(cast.slice(0, 20));
     } catch (error) {
       throw Error("cast not found");
     }

@@ -27,27 +27,13 @@ const NavBar = () => {
       window.removeEventListener("scroll", windowScroll);
     };
   }, []);
-  const NavTitle = [
-    { title: "Home", id: 1, path: "/" },
-    { title: "Movies", id: 2, path: "All" },
-    { title: "TvShows", id: 3, path: "/Popular" },
-    { title: "Upcoming Movies", id: 4, path: "/Upcoming" },
-  ];
-
-  const NavData = [
-    { title: "Home", id: 1, path: "/" },
-    { title: "All Movies", id: 2, path: "All" },
-    { title: "Most Popular Movies", id: 3, path: "/Popular" },
-    { title: "Upcoming Movies", id: 4, path: "/Upcoming" },
-  ];
 
   return (
     <section
-      className={`flex justify-center h-16 w-full bg-[#20293A] text-white fixed bottom-0 items-center z-10 ${
-        isScroll
-          ? "sm:bg-clip-padding sm:backdrop-filter sm:backdrop-blur-md sm:bg-[#222433c3]"
-          : ""
-      }  sm:top-0 sm:shadow-navBar sm:justify-start transition-all duration-500 ease-in-out`}
+      className={`flex justify-center bg-slate-800 sm:bg-transparent h-16 w-full  text-white fixed bottom-0 items-center z-10 ${
+        isScroll &&
+        "bg-clip-padding backdrop-filter backdrop-blur-xl bg-[#222433c3]"
+      }  sm:top-0 shadow-navBar sm:justify-start  sm:bg-gradient-to-b sm:from-10% sm:from-primaryColor sm:to-transparent transition-all duration-500 ease-in-out`}
     >
       <NavLink
         to="/"
@@ -60,19 +46,7 @@ const NavBar = () => {
           alt="MovieIcon"
         />
       </NavLink>
-      <section
-        className={`flex w-full justify-between text-center items-center sm:my-2 sm:ml-8 sm:text-xs md:text-base`}
-      >
-        {/* {NavData.map((data) => (
-          <NavLink
-            end
-            to={data.path}
-            key={data.id}
-            className="text-[#7a8197] sm:text-white px-3 py-6 sm:py-1 sm:px-6 md:px-5 hover:active-btn"
-          >
-            {data.title}
-          </NavLink>
-        ))} */}
+      <section className="flex w-full justify-between text-center items-center sm:my-2 sm:ml-8 sm:text-xs md:text-base">
         <RenderNavBar />
       </section>
     </section>
@@ -142,7 +116,7 @@ const RenderNavBar = () => {
           </NavLink>
         ))}
       </section>
-      <section className="hidden sm:flex sm:w-full sm:items-center justify-between pr-20">
+      <section className="hidden sm:flex w-full items-center justify-between pr-20">
         <section>
           {NavTitle.map((data) => (
             <NavLink
@@ -155,7 +129,7 @@ const RenderNavBar = () => {
             </NavLink>
           ))}
         </section>
-        <span className="border-2 rounded-full text-ms w-9 h-9 flex justify-center items-center cursor-pointer hover:bg-[#01a2ff] hover:text-black hover:border-none transition-colors duration-500">
+        <span className="h-7 w-7 border-2 text-sm rounded-full flex justify-center items-center cursor-pointer md:text-lg md:w-9 md:h-9  hover:bg-[#01a2ff] hover:text-black hover:border-none transition-colors duration-500">
           <RiSearchLine />
         </span>
       </section>

@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer components {
+  .paginationSliderHeader {
+    padding: 5rem;
+  }
   body {
     background-color: #1d1c2a;
   }
@@ -31,6 +34,29 @@
     border-radius: 16px;
     transition: color 0.5s ease-in-out;
     transition: background-color 0.5s ease-in-out;
+  }
+
+  .swiper-wrapper .swiper-pagination .swiper-pagination-bullets {
+    position: absolute;
+    bottom: 10% !important;
+    left: 80% !important;
+  }
+  .swiper .swiper-pagination .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: gray;
+  }
+  .swiper .swiper-pagination .swiper-pagination-bullet-active {
+    background: white;
+    width: 25px;
+    border-radius: 10px;
+  }
+  @media screen and (max-width: 768px) {
+    .swiper .swiper-pagination .swiper-pagination-bullets {
+      position: absolute;
+      bottom: 10% !important;
+      left: 50% !important;
+    }
   }
 }
 

@@ -12,7 +12,12 @@ import { BsArrowLeft } from "react-icons/bs";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, EffectCoverflow, Navigation } from "swiper/modules";
+import {
+  Autoplay,
+  EffectCoverflow,
+  EffectCreative,
+  Navigation,
+} from "swiper/modules";
 
 // Import Swiper styles
 import "swiper/css";
@@ -142,6 +147,7 @@ const RenderSlider = ({ casts }) => {
           slidesPerView={4}
           spaceBetween={20}
           loop={true}
+          grabCursor={true}
           autoplay={{
             delay: 800,
             disableOnInteraction: false,
@@ -152,7 +158,7 @@ const RenderSlider = ({ casts }) => {
             800: { slidesPerView: 8 },
             1000: { slidesPerView: 9 },
           }}
-          modules={[Autoplay]}
+          modules={[Autoplay, EffectCreative]}
         >
           {casts.map((cast) => (
             <SwiperSlide key={cast.id}>

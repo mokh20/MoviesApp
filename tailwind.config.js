@@ -3,9 +3,13 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      colors: {
+        primaryColor: "#111729",
+      },
       boxShadow: {
+        homeSlider: "inset 0px -50px 30px 0px #121728",
         titleDetail: "inset 0px -55px 45px 0px #1D1C29",
-        navBar: "inset 0px 50px 25px -25px #1D1C29",
+        navBar: "inset 0px 50px 100px -41px  #0000001c",
       },
       borderColor: {
         borderBottom: "#ffffff23",
