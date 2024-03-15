@@ -42,8 +42,8 @@
     left: 80% !important;
   }
   .swiper .swiper-pagination .swiper-pagination-bullet {
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     background: gray;
   }
   .swiper .swiper-pagination .swiper-pagination-bullet-active {

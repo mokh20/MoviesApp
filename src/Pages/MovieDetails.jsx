@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 // Import Icon
@@ -33,11 +33,11 @@ const MovieDetails = ({ movieData, casts }) => {
   const genres = movieData?.genres?.map((gen) => gen.name);
   return (
     <div className="w-full -mt-16">
-      <NavLink to="/">
+      <Link to="/">
         <button className="btn-back-home text-xl top-16 left-4 z-10 hover:bg-[#01a2ff] sm:left-9 sm:top-20">
           <BsArrowLeft />
         </button>
-      </NavLink>
+      </Link>
       <div
         style={{
           backgroundImage: `url('https://image.tmdb.org/t/p/original${movieData.backdrop_path}')`,

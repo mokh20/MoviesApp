@@ -7,7 +7,7 @@ export default {
         primaryColor: "#111729",
       },
       boxShadow: {
-        homeSlider: "inset 0px -50px 30px 0px #121728",
+        homeSlider: "inset 0px -70px 30px 0px #121728",
         titleDetail: "inset 0px -55px 45px 0px #1D1C29",
         navBar: "inset 0px 50px 100px -41px  #0000001c",
       },
