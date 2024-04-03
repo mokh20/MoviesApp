@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, EffectCreative, Pagination } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
@@ -46,22 +46,29 @@ const RenderTrending = ({ trendingData }) => {
       }}
       pagination={{
         clickable: true,
-        dynamicBullets: false,
       }}
-      modules={[Pagination, Autoplay, EffectCreative]}
+      modules={[Pagination, Autoplay]}
     >
       {trendingData.map((item) => (
         <SwiperSlide key={item.id}>
-          <Link to={`/All/${item.id}`}>
+          <Link
+            to={
+              item?.media_type === "movie"
+                ? `/Movies/${item.id}`
+                : `/TvShow/${item.id}`
+            }
+          >
             <div
               style={{
                 backgroundImage: `url('https://image.tmdb.org/t/p/original${item.backdrop_path}')`,
               }}
-              className="bg-cover bg-center  min-h-[300px] flex flex-wrap content-end items-end shadow-homeSlider sm:min-h-[360px] md:h-screen"
+              className="bg-cover bg-top h-screen flex flex-wrap content-end items-end shadow-homeSlider "
             >
-              <div className="grid pl-8 w-2/5">
-                <h2 className="text-white text-3xl mb-2">{item.title}</h2>
-                <span className="text-[#fffff] font-light ">
+              <div className="grid px-8 w-full md:w-2/5">
+                <h2 className="text-white text-2xl md:text-3xl mb-2">
+                  {item.title ? item.title : item.name}
+                </h2>
+                <span className="text-detailColor text-sm font-light mb-8 md:mb-0 md:text-base">
                   {item?.overview.length >= 120
                     ? `${item?.overview.slice(0, 120)}...`
                     : item?.overview}

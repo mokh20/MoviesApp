@@ -78,7 +78,7 @@ const Slider = ({ movies, title }) => {
             >
               <section className="hover:active grid justify-items-center">
                 <BsArrowRight className="text-lg sm:text-2xl"></BsArrowRight>
-                <p>See All Movies</p>
+                <p>See Movies</p>
               </section>
             </NavLink>
           </SwiperSlide>

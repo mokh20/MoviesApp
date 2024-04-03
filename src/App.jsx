@@ -4,7 +4,7 @@ import MovieProvider from "./Context/MovieProvider";
 import Home from "./Pages/Home";
 import Trending from "./Pages/Trending";
 import Upcoming from "./Pages/Upcoming";
-import Movies from "./Pages/MoviesFiltered";
+import Movies from "./Pages/MoviesByGenres";
 import MovieDetailsData from "./Components/MovieDetailsData";
 
 const App = () => {
@@ -15,7 +15,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/Popular" element={<Trending />} />
           <Route path="/Upcoming" element={<Upcoming />} />
-          <Route path="/All/:id" element={<MovieDetailsData />} />
+          <Route path="/Movies/:id" element={<MovieDetailsData />} />
           <Route path="*" element={<Movies />} />
         </Routes>
         <NavBar />

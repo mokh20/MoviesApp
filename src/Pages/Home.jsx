@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import Genre from "../Components/Genre";
-import Movies from "./MoviesFiltered";
+import Movies from "./MoviesByGenres";
 import Slider from "../utils/Slider";
 import { useMovies } from "../Context/MovieProvider";
 import { Helmet } from "react-helmet";
@@ -27,7 +27,7 @@ const Home = () => {
       </Helmet>
       <Genre />
       <Movies>
-        <Slider movies={movies} title="All" />
+        <Slider movies={movies} title="Movies" />
       </Movies>
       <Slider movies={popularMovies} title="Popular" />
       <Slider movies={upcomingMovies} title="Upcoming" />

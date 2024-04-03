@@ -59,14 +59,14 @@ const RenderNavBar = () => {
   const location = useLocation();
   const NavTitle = [
     { title: "Home", id: 1, path: "/" },
-    { title: "Movies", id: 2, path: "All" },
+    { title: "Movies", id: 2, path: "Movies" },
     { title: "TvShows", id: 3, path: "/Popular" },
     { title: "Upcoming Movies", id: 4, path: "/Upcoming" },
   ];
 
   const NavData = [
     { title: "Home", id: 1, path: "/" },
-    { title: "All Movies", id: 2, path: "All" },
+    { title: "Movies", id: 2, path: "Movies" },
     { title: "Most Popular Movies", id: 3, path: "/Popular" },
     { title: "Upcoming Movies", id: 4, path: "/Upcoming" },
   ];
@@ -77,7 +77,7 @@ const RenderNavBar = () => {
       title: <RiFilmLine />,
       filledTitle: <RiFilmFill />,
       id: 2,
-      path: "/Movie",
+      path: "/Movies",
     },
     {
       title: <RiSearchLine />,

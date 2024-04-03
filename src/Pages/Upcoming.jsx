@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useMovies } from "../Context/MovieProvider";
-import AllMovies from "../utils/AllMovies";
+import Movies from "../utils/Movies";
 import { Helmet } from "react-helmet";
 
 const Upcoming = () => {
@@ -13,7 +13,7 @@ const Upcoming = () => {
       <Helmet>
         <title>Upcoming</title>
       </Helmet>
-      <AllMovies movies={upcomingMovies} />
+      <Movies movies={upcomingMovies} />
     </section>
   );
 };

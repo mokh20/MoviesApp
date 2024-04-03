@@ -105,7 +105,7 @@ const CastMovie = ({ cast }) => {
 const RenderSlider = ({ casts }) => {
   return (
     <section className="w-full my-4">
-      <h2 className="px-4">Top Cast</h2>
+      <h2 className="px-4 text-white font-bold text-xl">Top Cast</h2>
       {/* Slider in mobile device */}
       <section className="w-full my-4 block sm:hidden">
         <Swiper

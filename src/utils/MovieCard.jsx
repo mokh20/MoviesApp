@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const MovieCard = ({ movie }) => {
   return (
     <div className="grid relative w-[145px] group text-[.7rem] text-white overflow-hidden cursor-pointer">
-      <Link to={`/All/${movie.id}`}>
+      <Link to={`/Movies/${movie.id}`}>
         <div className="w-full absolute bottom-2 left-0 pl-2 z-10 break-word p-1 bg-[#00000046] ">
           {movie.title || movie.name}
         </div>

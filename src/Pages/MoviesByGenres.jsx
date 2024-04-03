@@ -2,10 +2,10 @@ import { useEffect } from "react";
 import { useMovies } from "../Context/MovieProvider";
 import { Route, Routes } from "react-router-dom";
 import Genre from "../Components/Genre";
-import AllMovies from "../utils/AllMovies";
+import Movies from "../utils/Movies";
 import { Helmet } from "react-helmet";
 
-const Movies = ({ children }) => {
+const MoviesByGenres = ({ children }) => {
   const { setMovies, movies, filteredGenres, activeGenre, page, setPage } =
     useMovies();
   useEffect(() => {
@@ -25,14 +25,14 @@ const Movies = ({ children }) => {
       <Routes>
         <Route index element={children} />
         <Route
-          path="/All"
+          path="/Movies"
           element={
             <section className="flex flex-wrap mt-4 my-4 items-start w-full justify-center relative">
               <Helmet>
-                <title>All Movies</title>
+                <title>Movies</title>
               </Helmet>
               <Genre />
-              <AllMovies movies={movies} />
+              <Movies movies={movies} />
             </section>
           }
         ></Route>
@@ -41,4 +41,4 @@ const Movies = ({ children }) => {
   );
 };
 
-export default Movies;
+export default MoviesByGenres;

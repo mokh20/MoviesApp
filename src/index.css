@@ -7,7 +7,7 @@
     padding: 5rem;
   }
   body {
-    background-color: #1d1c2a;
+    background-color: #111729;
   }
   .page {
     color: #7a8197;
@@ -36,10 +36,10 @@
     transition: background-color 0.5s ease-in-out;
   }
 
-  .swiper-wrapper .swiper-pagination .swiper-pagination-bullets {
+  .swiper .swiper-pagination {
     position: absolute;
-    bottom: 10% !important;
-    left: 80% !important;
+    bottom: 0%;
+    left: 0%;
   }
   .swiper .swiper-pagination .swiper-pagination-bullet {
     width: 8px;
@@ -48,14 +48,20 @@
   }
   .swiper .swiper-pagination .swiper-pagination-bullet-active {
     background: white;
-    width: 25px;
+    width: 40px;
     border-radius: 10px;
   }
-  @media screen and (max-width: 768px) {
-    .swiper .swiper-pagination .swiper-pagination-bullets {
-      position: absolute;
-      bottom: 10% !important;
-      left: 50% !important;
+
+  @media screen and (min-width: 768px) {
+    .swiper .swiper-pagination {
+      bottom: 3%;
+      left: 30%;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    .swiper .swiper-pagination {
+      bottom: 3%;
+      left: 40%;
     }
   }
 }
