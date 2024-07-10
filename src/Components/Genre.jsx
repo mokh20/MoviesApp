@@ -12,8 +12,8 @@ const Genre = () => {
       {genres.map((gen) => (
         <button
           key={gen.id}
-          className={`px-4 py-2 rounded-3xl text-sm m-2 transition-all duration-700 sm:text-base hover:bg-[#01a2ff]  ${
-            activeGenre == gen.id ? "bg-[#01a2ff]" : "bg-slate-600"
+          className={`px-4 py-2 rounded-3xl text-sm m-2 transition-all duration-700 sm:text-base hover:bg-hoverBtn  ${
+            activeGenre == gen.id ? "bg-hoverBtn" : "bg-slate-600"
           }`}
           onClick={() => setActiveGenre(gen.id)}
         >

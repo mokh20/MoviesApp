@@ -34,7 +34,7 @@ const MovieDetails = ({ movieData, casts }) => {
   return (
     <div className="w-full -mt-16">
       <Link to="/">
-        <button className="btn-back-home text-xl top-16 left-4 z-10 hover:bg-[#01a2ff] sm:left-9 sm:top-20">
+        <button className="btn-back-home text-xl top-16 left-4 z-10 hover:bg-hoverBtn sm:left-9 sm:top-20">
           <BsArrowLeft />
         </button>
       </Link>
@@ -64,7 +64,7 @@ const MovieDetails = ({ movieData, casts }) => {
         </div>
         <AiFillPlayCircle
           onClick={() => setIsOpen((prev) => !prev)}
-          className="fixed top-4 right-4 text-4xl text-slate-600 hover:text-[#01a2ff] z-20"
+          className="fixed top-4 right-4 text-4xl text-slate-600 hover:text-hoverBtn z-20"
         />
       </div>
       <p className="m-2 border-b-[1px] border-borderBottom pb-2 px-2">
@@ -132,8 +132,8 @@ const RenderSlider = ({ casts }) => {
             500: { spaceBetween: 80 },
           }}
         >
-          <AiOutlineLeftCircle className="swiper-button-prev text-[#01a2ff] w-12" />
-          <AiOutlineRightCircle className="swiper-button-next text-[#01a2ff] w-12 " />
+          <AiOutlineLeftCircle className="swiper-button-prev text-hoverBtn w-12" />
+          <AiOutlineRightCircle className="swiper-button-next text-hoverBtn w-12 " />
           {casts.map((cast) => (
             <SwiperSlide key={cast.id}>
               <CastMovie cast={cast} />

@@ -34,7 +34,7 @@ export default HeaderSlider;
 const RenderTrending = ({ trendingData }) => {
   return (
     <Swiper
-      speed={600}
+      speed={1500}
       slidesPerView={1}
       grabCursor={true}
       centeredSlides={true}

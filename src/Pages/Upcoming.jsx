@@ -9,7 +9,7 @@ const Upcoming = () => {
     getUpcomingMovies();
   }, []);
   return (
-    <section>
+    <section className="sm:mt-16">
       <Helmet>
         <title>Upcoming</title>
       </Helmet>

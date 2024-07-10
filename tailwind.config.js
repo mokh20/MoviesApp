@@ -6,6 +6,7 @@ export default {
       colors: {
         primaryColor: "#111729",
         detailColor: "#BAB6B6",
+        hoverBtn: "#01a2ff",
       },
       boxShadow: {
         homeSlider: "inset 0px -70px 30px 0px #121728",

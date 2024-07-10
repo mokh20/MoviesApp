@@ -129,7 +129,7 @@ const RenderNavBar = () => {
             </NavLink>
           ))}
         </section>
-        <span className="h-7 w-7 border-2 text-sm rounded-full flex justify-center items-center cursor-pointer md:text-lg md:w-9 md:h-9  hover:bg-[#01a2ff] hover:text-black hover:border-none transition-colors duration-500">
+        <span className="h-7 w-7 border-2 text-sm rounded-full flex justify-center items-center cursor-pointer md:text-lg md:w-9 md:h-9  hover:bg-hoverBtn hover:text-black hover:border-none transition-colors duration-500">
           <RiSearchLine />
         </span>
       </section>

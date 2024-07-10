@@ -11,7 +11,7 @@ const Trending = () => {
   }, []);
 
   return (
-    <section>
+    <section className="sm:mt-16">
       <Helmet>
         <title>Popular</title>
       </Helmet>

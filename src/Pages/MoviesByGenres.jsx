@@ -21,7 +21,7 @@ const MoviesByGenres = ({ children }) => {
     }
   }, [page]);
   return (
-    <section className="w-full flex justify-center ">
+    <section className="w-full flex justify-center sm:mt-8 ">
       <Routes>
         <Route index element={children} />
         <Route

@@ -30,6 +30,7 @@ const Slider = ({ movies, title }) => {
       </NavLink>
       <section className="bg-slate-800 p-4 pl-6 rounded-xl lg:pr-8">
         <Swiper
+          speed={1000}
           spaceBetween={50}
           slidesPerView={2}
           navigation={{
@@ -57,9 +58,9 @@ const Slider = ({ movies, title }) => {
             },
           }}
         >
-          <AiOutlineLeftCircle className="swiper-button-prev text-[#01a2ff] w-12 hover:animate-leftBtn" />
+          <AiOutlineLeftCircle className="swiper-button-prev text-hoverBtn w-12 hover:animate-leftBtn" />
           <AiOutlineRightCircle
-            className={`swiper-button-next text-[#01a2ff] w-12 transition-all ease-in-out duration-500 hover:animate-rightBtn ${
+            className={`swiper-button-next text-hoverBtn w-12 transition-all ease-in-out duration-500 hover:animate-rightBtn ${
               isEnd ? "opacity-0 cursor-default" : "opacity-100 cursor-pointer"
             }`}
           />
